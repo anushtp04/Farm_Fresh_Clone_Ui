@@ -53,7 +53,7 @@ class HomePage extends StatelessWidget {
       ),
       body: CustomScrollView(slivers: [
         SliverAppBar(
-          title: Text(
+          title: const Text(
             "FARMERS FRESH CLONE",
             style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
           ),
@@ -61,7 +61,7 @@ class HomePage extends StatelessWidget {
             TextButton(
               onPressed: () {},
               child: Wrap(
-                children: [
+                children: const [
                   Icon(
                     Icons.location_on_outlined,
                     color: Colors.white,
@@ -86,11 +86,11 @@ class HomePage extends StatelessWidget {
           bottom: AppBar(
             elevation: 0,
             title: Container(
-              margin: EdgeInsets.only(bottom: 5),
+              margin: const EdgeInsets.only(bottom: 5),
               color: Colors.white,
               height: 40,
               width: double.infinity,
-              child: TextField(
+              child: const TextField(
                 decoration: InputDecoration(
                     hintText: "Search for Vegetables, Fruits, .....",
                     prefixIcon: Icon(
@@ -106,7 +106,7 @@ class HomePage extends StatelessWidget {
 
               ///first item
               Container(
-                padding: EdgeInsets.only(top: 10, bottom: 10),
+                padding: const EdgeInsets.only(top: 10, bottom: 10),
                 color: Colors.green[50],
                 height: 56,
                 child: ListView(
@@ -115,15 +115,15 @@ class HomePage extends StatelessWidget {
                     listNames.length,
                         (index) =>
                         Container(
-                            padding: EdgeInsets.only(
+                            padding: const EdgeInsets.only(
                               left: 20,
                               right: 20,
                             ),
-                            margin: EdgeInsets.only(left: 10),
+                            margin: const EdgeInsets.only(left: 10),
                             decoration: BoxDecoration(
                                 border: Border.all(color: Colors.green),
                                 color: Colors.grey[200],
-                                borderRadius: BorderRadius.all(Radius.circular(
+                                borderRadius: const BorderRadius.all(Radius.circular(
                                     20))),
                             child: Center(
                               child: Text(
@@ -157,7 +157,7 @@ class HomePage extends StatelessWidget {
                     height: 200,
                     viewportFraction: 1,
                     autoPlay: true,
-                    autoPlayAnimationDuration: Duration(seconds: 1),
+                    autoPlayAnimationDuration: const Duration(seconds: 1),
                     // autoPlayInterval: Duration(seconds: 10),
                     enableInfiniteScroll: true,
                     autoPlayCurve: Curves.fastOutSlowIn),
@@ -165,13 +165,13 @@ class HomePage extends StatelessWidget {
 
               ///3rd item
               Container(
-                margin: EdgeInsets.only(
+                margin: const EdgeInsets.only(
                     left: 20, right: 20, top: 10, bottom: 10),
                 height: 80,
                 decoration: BoxDecoration(
                     color: Colors.white,
                     border: Border.all(color: Colors.black),
-                    borderRadius: BorderRadius.all(Radius.circular(10))),
+                    borderRadius: const BorderRadius.all(Radius.circular(10))),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
@@ -184,7 +184,7 @@ class HomePage extends StatelessWidget {
                               height: 35,
                               width: 35,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 7,
                             ),
                             Text("30 MIN POLICY", style: buttonbarText)
@@ -199,7 +199,7 @@ class HomePage extends StatelessWidget {
                               height: 35,
                               width: 35,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 7,
                             ),
                             Text("TRACEABILITY", style: buttonbarText)
@@ -214,7 +214,7 @@ class HomePage extends StatelessWidget {
                               height: 35,
                               width: 35,
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 7,
                             ),
                             Text("LOCAL SOURCING", style: buttonbarText)
@@ -226,8 +226,8 @@ class HomePage extends StatelessWidget {
 
               ///4th item
               Container(
-                  margin: EdgeInsets.only(left: 10, bottom: 20),
-                  child: Text(
+                  margin: const EdgeInsets.only(left: 10, bottom: 20),
+                  child: const Text(
                     "Shop By Catagories",
                     style: TextStyle(fontSize: 22, fontWeight: FontWeight.w600),
                   )),
@@ -239,9 +239,9 @@ class HomePage extends StatelessWidget {
               childCount: gridListName.length,
                   (context, index) {
                 return Padding(
-                  padding: EdgeInsets.only(left: 5,right: 5),
+                  padding: const EdgeInsets.only(left: 5,right: 5),
                   child: Container(
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       boxShadow: [
                         BoxShadow(
                           color: Colors.grey,
@@ -256,7 +256,7 @@ class HomePage extends StatelessWidget {
                       children: [
                         Container(
                           decoration: BoxDecoration(
-                              borderRadius: BorderRadius.only(topLeft: Radius
+                              borderRadius: const BorderRadius.only(topLeft: Radius
                                   .circular(10), topRight: Radius.circular(10)),
                               color: Colors.blue,
                             image: DecorationImage(
@@ -269,7 +269,7 @@ class HomePage extends StatelessWidget {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(top: 4),
-                          child: Text("${gridListName[index]}",style: TextStyle(fontSize: 13,),),
+                          child: Text("${gridListName[index]}",style: const TextStyle(fontSize: 13,),),
                         )
                       ],
                     ),
@@ -277,7 +277,7 @@ class HomePage extends StatelessWidget {
                 );
               },
             ),
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 3,
                 mainAxisSpacing: 20)),
 
@@ -285,8 +285,8 @@ class HomePage extends StatelessWidget {
         SliverList(delegate: SliverChildListDelegate(
           [
             Container(
-              margin: EdgeInsets.only(top: 20,bottom: 20),
-              decoration: BoxDecoration(
+              margin: const EdgeInsets.only(top: 20,bottom: 20),
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage("assets/catagories/container.png"),
                   fit: BoxFit.fill
@@ -295,8 +295,8 @@ class HomePage extends StatelessWidget {
               height: 160,
             ),
             Container(
-                margin: EdgeInsets.only(left: 10, bottom: 20),
-                child: Text(
+                margin: const EdgeInsets.only(left: 10, bottom: 20),
+                child: const Text(
                   "Best Selling Products",
                   style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
                 )),
@@ -309,10 +309,10 @@ class HomePage extends StatelessWidget {
           childCount: sellingProductsGridCount.length,
           (context, index) {
             return Container(
-              margin: EdgeInsets.only(left: 5,right: 5),
+              margin: const EdgeInsets.only(left: 5,right: 5),
               decoration: BoxDecoration(
                 color: Colors.white,
-                border: Border.all(color: Color.fromRGBO(220, 220, 220, 1))
+                border: Border.all(color: const Color.fromRGBO(220, 220, 220, 1))
 
               ),
               child: Column(
@@ -328,19 +328,19 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    padding: EdgeInsets.only(left: 5,bottom: 5,right: 5),
+                    padding: const EdgeInsets.only(left: 5,bottom: 5,right: 5),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text("${sellingProductsGridName[index]}",style: TextStyle(
+                        Text("${sellingProductsGridName[index]}",style: const TextStyle(
                             fontWeight: FontWeight.w500,fontSize: 16
                         )),
-                        SizedBox(height: 10,),
+                        const SizedBox(height: 10,),
                         Row(
                           children: [
-                            Text("${sellingProductsGridCPrice[index]}",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 16),),
-                            SizedBox(width: 10,),
+                            Text("${sellingProductsGridCPrice[index]}",style: const TextStyle(fontWeight: FontWeight.w500,fontSize: 16),),
+                            const SizedBox(width: 10,),
                             Text("${sellingProductsGridPPrice[index]}",style: TextStyle(
                              decoration: TextDecoration.lineThrough,
                               fontWeight: FontWeight.w500,
@@ -352,8 +352,8 @@ class HomePage extends StatelessWidget {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            Text("${sellingProductsGridCount[index]}",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 15)),
-                            ElevatedButton(onPressed: (){}, child: Padding(
+                            Text("${sellingProductsGridCount[index]}",style: const TextStyle(fontWeight: FontWeight.w500,fontSize: 15)),
+                            ElevatedButton(onPressed: (){}, child: const Padding(
                               padding: EdgeInsets.only(left: 10,right: 10),
                               child: Text("ADD"),
                             ))
@@ -367,7 +367,7 @@ class HomePage extends StatelessWidget {
               ),
             );
           },
-        ), gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,
+        ), gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2,
         mainAxisSpacing: 20,
         // mainAxisExtent: 220,
         childAspectRatio: 3/4)),
@@ -376,17 +376,17 @@ class HomePage extends StatelessWidget {
         SliverList(delegate: SliverChildListDelegate(
           [
             Container(
-              margin: EdgeInsets.all(10),
-                child: ElevatedButton(onPressed: (){}, child: Text("VIEW MORE",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),),style: ButtonStyle(
+              margin: const EdgeInsets.all(10),
+                child: ElevatedButton(onPressed: (){},style: ButtonStyle(
                   shape: MaterialStatePropertyAll(RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)))
-                ),)),
+                ), child: const Text("VIEW MORE",style: TextStyle(fontSize: 15,fontWeight: FontWeight.bold),),)),
 
             Divider(color: Colors.grey[300],
             thickness: 10,),
 
             Container(
               height: 150,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 image: DecorationImage(
                   image: AssetImage("assets/carousel/certificate.png"),
                   fit: BoxFit.fill
@@ -398,25 +398,25 @@ class HomePage extends StatelessWidget {
 
             ///9th item
             Container(
-                margin: EdgeInsets.only(left: 10, bottom: 20,top: 10),
+                margin: const EdgeInsets.only(left: 10, bottom: 20,top: 10),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
+                    const Text(
                       "Our Blog Posts",
                       style: TextStyle(fontSize: 22, fontWeight: FontWeight.w500),
                     ),
-                    SizedBox(height: 20,),
-                    Container(
+                    const SizedBox(height: 20,),
+                    SizedBox(
                       height: 200,
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
                         itemBuilder: (context, index) {
                           return Container(
                             decoration: BoxDecoration(
-                              border: Border.all(color: Color.fromRGBO(220, 220, 220, 1))
+                              border: Border.all(color: const Color.fromRGBO(220, 220, 220, 1))
                             ),
-                            margin: EdgeInsets.only(left: 4,right: 4),
+                            margin: const EdgeInsets.only(left: 4,right: 4),
                             width: 150,
                             child: Column(
                               children: [
@@ -430,25 +430,23 @@ class HomePage extends StatelessWidget {
 
                                   ),
                                 ),
-                                Container(
-                                  child: Column(
-                                    children: [
-                                      Padding(
-                                        padding: EdgeInsets.only(left: 5,top: 5),
-                                        child: Text("${ourBlogPostsTitle[index]}",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 17),),
+                                Column(
+                                  children: [
+                                    Padding(
+                                      padding: const EdgeInsets.only(left: 5,top: 5),
+                                      child: Text("${ourBlogPostsTitle[index]}",style: const TextStyle(fontWeight: FontWeight.w500,fontSize: 17),),
+                                    ),
+                                    Container(
+                                      padding: const EdgeInsets.only(top: 10),
+                                      child: Row(
+                                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                                        children: [
+                                          Text("${ourBlogPostsSubtitle[index]}"),
+                                          const Icon(Icons.arrow_forward)
+                                        ],
                                       ),
-                                      Container(
-                                        padding: EdgeInsets.only(top: 10),
-                                        child: Row(
-                                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                                          children: [
-                                            Text("${ourBlogPostsSubtitle[index]}"),
-                                            Icon(Icons.arrow_forward)
-                                          ],
-                                        ),
-                                      )
-                                    ],
-                                  ),
+                                    )
+                                  ],
                                 ),
                               ],
                             ),
@@ -458,7 +456,7 @@ class HomePage extends StatelessWidget {
                     )
                   ],
                 )),
-            TextButton(onPressed: (){}, child: Text("VIEW MORE",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),)),
+            TextButton(onPressed: (){}, child: const Text("VIEW MORE",style: TextStyle(fontSize: 16,fontWeight: FontWeight.bold),)),
             Divider(color: Colors.grey[300],
               thickness: 10,),
 
@@ -466,9 +464,9 @@ class HomePage extends StatelessWidget {
             CarouselSlider(
                 items: List.generate(customerSayText.length, (index) => Container(
                   // height: 200,
-                  margin: EdgeInsets.only(left: 10,right: 10),
+                  margin: const EdgeInsets.only(left: 10,right: 10),
                   decoration: BoxDecoration(
-                    border: Border.all(color: Color.fromRGBO(220, 220, 220, 1))
+                    border: Border.all(color: const Color.fromRGBO(220, 220, 220, 1))
                   ),
                   child: Column(
                     children: [
@@ -478,10 +476,10 @@ class HomePage extends StatelessWidget {
                         ),
                         title: Text("${customerSayTitle[index]}"),
                         subtitle: Text("${customerSaySubTitle[index]}"),
-                        trailing: Icon(Icons.format_quote),
+                        trailing: const Icon(Icons.format_quote),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(left: 5,right: 5),
+                        padding: const EdgeInsets.only(left: 5,right: 5),
                         child: Text("${customerSayText[index]}"),
                       )
                     ],
@@ -492,20 +490,20 @@ class HomePage extends StatelessWidget {
               height: 220,
                   autoPlay: true,
                   autoPlayCurve: Curves.linear,
-                  autoPlayAnimationDuration: Duration(milliseconds: 800),
+                  autoPlayAnimationDuration: const Duration(milliseconds: 800),
                   viewportFraction: 1
 
             )),
 
             ///11th item
-            Container(
+            SizedBox(
               height: 130,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("This is Kochi-based-farm-to-fork online marketplace is ",style: TextStyle(fontSize: 15),),
-                  Text("connecting farmers directly to customers",style: TextStyle(fontSize: 15),),
-                  SizedBox(height: 20,),
+                  const Text("This is Kochi-based-farm-to-fork online marketplace is ",style: TextStyle(fontSize: 15),),
+                  const Text("connecting farmers directly to customers",style: TextStyle(fontSize: 15),),
+                  const SizedBox(height: 20,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: List.generate(4, (index) => Container(
@@ -528,23 +526,23 @@ class HomePage extends StatelessWidget {
             ///12th item
 
             Container(
-              padding: EdgeInsets.only(left: 10),
+              padding: const EdgeInsets.only(left: 10),
               height: 260,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 20,),
-                  Text("Get to Know us",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
-                  SizedBox(height: 20,),
-                  Text("About Us | Our Farmers | Blog",style: TextStyle(fontSize: 14,color: Colors.grey),),
-                  SizedBox(height: 30,),
+                  const SizedBox(height: 20,),
+                  const Text("Get to Know us",style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),),
+                  const SizedBox(height: 20,),
+                  const Text("About Us | Our Farmers | Blog",style: TextStyle(fontSize: 14,color: Colors.grey),),
+                  const SizedBox(height: 30,),
 
-                  Text("Useful Links",style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
-                  SizedBox(height: 20,),
-                  Text("Privacy Policy | Return & Refund Policy | Terms & Conditions",style: TextStyle(fontSize: 14,color: Colors.grey),),
+                  const Text("Useful Links",style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),),
+                  const SizedBox(height: 20,),
+                  const Text("Privacy Policy | Return & Refund Policy | Terms & Conditions",style: TextStyle(fontSize: 14,color: Colors.grey),),
 
                   Padding(
-                    padding: EdgeInsets.only(left: 20,right: 20,top: 30),
+                    padding: const EdgeInsets.only(left: 20,right: 20,top: 30),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
@@ -560,9 +558,9 @@ class HomePage extends StatelessWidget {
             ),
             Container(
               height: 60,
-              padding: EdgeInsets.only(top:20),
+              padding: const EdgeInsets.only(top:20),
               color: Colors.green,
-              child: Text(
+              child: const Text(
                 "Copyright @ 2021 Farmers Fresh Zone. All Rights Reserved",
                 style: TextStyle(fontSize: 13,color: Colors.white),
                 textAlign: TextAlign.center,
