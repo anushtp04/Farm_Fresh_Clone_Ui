@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'mainPage.dart';
 
 void main(){
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.transparent));
 }
